@@ -30,7 +30,7 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-						<a href="index.html" style="outline: none; text-decoration: none; border: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation;">
+						<a href="index.html" id="logo-link" style="outline: none; text-decoration: none; border: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation;">
 								<img src="images/M-Icon-White.png" alt="Matterstack Logo" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; transition: all 0.3s ease; user-select: none;" 
 								onmouseover="this.style.filter='drop-shadow(0 0 8px #00ffcc) brightness(1.4)'; this.style.transform='scale(1.05)'; this.shakeInterval = setInterval(() => {this.animate([{transform: 'scale(1.05) rotate(-1deg)'}, {transform: 'scale(1.05) rotate(1deg)'}], {duration: 200, iterations: 1})}, 200);" 
 								onmouseout="this.style.filter=''; this.style.transform=''; clearInterval(this.shakeInterval);"
@@ -404,8 +404,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				// Handle logo click to prevent URL change
 				document.getElementById('logo-link').addEventListener('click', function(e) {
 					e.preventDefault();
-					// This will refresh the page without changing the URL
-					window.location.href = window.location.pathname.split('/').slice(0, -1).join('/') + '/' || '/';
+					// This solution works everywhere - just reload the current page
+					window.location.reload();
 				});
 			</script>
 			<!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
