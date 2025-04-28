@@ -11,6 +11,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+            /* Disable right-click on logo */
+            .logo img {
+                user-select: none;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+        </style>
 	</head>
 	<body class="is-preload">
 
@@ -20,10 +30,11 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<a href="index.html" style="outline: none; text-decoration: none; border: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation;">
+						<a href="index.html" style="outline: none; text-decoration: none; border: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation;">
 								<img src="images/M-Icon-White.png" alt="Matterstack Logo" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; transition: all 0.3s ease; user-select: none;" 
 								onmouseover="this.style.filter='drop-shadow(0 0 8px #00ffcc) brightness(1.4)'; this.style.transform='scale(1.05)'; this.shakeInterval = setInterval(() => {this.animate([{transform: 'scale(1.05) rotate(-1deg)'}, {transform: 'scale(1.05) rotate(1deg)'}], {duration: 200, iterations: 1})}, 200);" 
-								onmouseout="this.style.filter=''; this.style.transform=''; clearInterval(this.shakeInterval);">
+								onmouseout="this.style.filter=''; this.style.transform=''; clearInterval(this.shakeInterval);"
+								draggable="false">
 							</a>
 							<!-- <a href="index.html">
 								<img src="images/M-Icon-White.png" alt="Custom Logo" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; transition: transform 0.6s ease;" onmouseover="this.style.transform='rotate(360deg)'" onmouseout="this.style.transform='rotate(0deg)'">
@@ -368,6 +379,28 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+                // Prevent context menu on logo
+                document.querySelector('.logo').addEventListener('contextmenu', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // Prevent drag start on the logo image
+                document.querySelector('.logo img').addEventListener('dragstart', function(e) {
+                    e.preventDefault();
+                    return false;
+                });
+                
+                // Block save image option but allow click events
+                document.querySelector('.logo img').addEventListener('mousedown', function(e) {
+                    if (e.button === 2) { // Right click
+                        e.preventDefault();
+                        return false;
+                    }
+                    // Allow other mouse events to pass through
+                });
+            </script>
 			<!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 			<script>
 			document.addEventListener('DOMContentLoaded', function() {
