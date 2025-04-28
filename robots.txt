@@ -1,0 +1,6 @@
+# robots.txt for https://matterstack.ai/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://matterstack.ai/sitemap.xml
