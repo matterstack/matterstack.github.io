@@ -380,27 +380,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-                // Prevent context menu on logo
-                document.querySelector('.logo').addEventListener('contextmenu', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                
-                // Prevent drag start on the logo image
-                document.querySelector('.logo img').addEventListener('dragstart', function(e) {
-                    e.preventDefault();
-                    return false;
-                });
-                
-                // Block save image option but allow click events
-                document.querySelector('.logo img').addEventListener('mousedown', function(e) {
-                    if (e.button === 2) { // Right click
-                        e.preventDefault();
-                        return false;
-                    }
-                    // Allow other mouse events to pass through
-                });
-            </script>
+				// Prevent context menu on logo
+				document.querySelector('.logo').addEventListener('contextmenu', function(e) {
+					e.preventDefault();
+					return false;
+				});
+				
+				// Prevent drag start on the logo image
+				document.querySelector('.logo img').addEventListener('dragstart', function(e) {
+					e.preventDefault();
+					return false;
+				});
+				
+				// Block save image option but allow click events
+				document.querySelector('.logo img').addEventListener('mousedown', function(e) {
+					if (e.button === 2) { // Right click
+						e.preventDefault();
+						return false;
+					}
+					// Allow other mouse events to pass through
+				});
+				
+				// Handle logo click to prevent URL change
+				document.getElementById('logo-link').addEventListener('click', function(e) {
+					e.preventDefault();
+					// This will refresh the page without changing the URL
+					window.location.href = window.location.pathname.split('/').slice(0, -1).join('/') + '/' || '/';
+				});
+			</script>
 			<!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 			<script>
 			document.addEventListener('DOMContentLoaded', function() {
