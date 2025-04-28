@@ -401,18 +401,25 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					// Allow other mouse events to pass through
 				});
 				
-				// Handle logo click to prevent URL change
+				// Handle logo click to prevent index.html in URL or work locally
 				document.getElementById('logo-link').addEventListener('click', function(e) {
 					e.preventDefault();
 					
-					// For production environment, go to root domain without index.html
-					const currentUrl = window.location.href;
-					if (currentUrl.includes('/index.html')) {
-						window.history.replaceState({}, document.title, currentUrl.split('/index.html')[0] + '/');
+					// Check if we're testing locally
+					if (window.location.protocol === 'file:') {
+						// For local testing, just reload the page
 						window.location.reload();
 					} else {
-						// For local or already at clean URL
-						window.location.reload();
+						// Get the base URL without index.html
+						const baseUrl = window.location.origin + window.location.pathname.replace(/\/index\.html.*$/, '/');
+						
+						// Navigate to the clean URL
+						if (window.location.href !== baseUrl) {
+							window.location.href = baseUrl;
+						} else {
+							// If already at clean URL, just refresh
+							window.location.reload();
+						}
 					}
 				});
 			</script>
