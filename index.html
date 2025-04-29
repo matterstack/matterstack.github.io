@@ -4,7 +4,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-MG00TNYQ1F"></script>
@@ -15,6 +15,10 @@
 
 		gtag('config', 'G-MG00TNYQ1F');
 		</script>
+		
+		<!-- Performance Optimization -->
+		<link rel="preconnect" href="https://www.googletagmanager.com">
+		<link rel="preload" href="assets/css/main.css" as="style">
 
 		<!-- HTML Meta Tags -->
 		<title>Matterstack, Inc.</title>
@@ -22,6 +26,8 @@
 		<meta name="robots" content="index, follow">
 		<meta name="description" content="AI for Microelectronics Materials">	
 		<meta name="author" content="Matterstack, Inc.">
+		<link rel="alternate" hreflang="en" href="https://matterstack.ai/">
+
 
 		<!-- Facebook Meta Tags -->
 		<meta property="og:site_name" content="Matterstack, Inc.">
@@ -31,7 +37,7 @@
 		<meta property="og:description" content="AI for Microelectronics Materials">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="628">
-		<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/17b74381-8dd2-49df-a4b8-24e7a4054293.png?token=7IzagDb7Gr5ZlQf25rfdWDce1fkXS1dHPOH85Yrtp80&height=628&width=1200&expires=33281879052">
+		<meta property="og:image" content="https://matterstack.ai/images/logo-soocial.png">
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image">
@@ -39,14 +45,45 @@
 		<meta property="twitter:url" content="https://matterstack.ai/">
 		<meta name="twitter:title" content="Matterstack, Inc.">
 		<meta name="twitter:description" content="AI for Microelectronics Materials">
-		<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/17b74381-8dd2-49df-a4b8-24e7a4054293.png?token=7IzagDb7Gr5ZlQf25rfdWDce1fkXS1dHPOH85Yrtp80&height=628&width=1200&expires=33281879052">
-
-		<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+		<meta name="twitter:image:width" content="1200">
+		<meta name="twitter:image:height" content="628">
+		<meta name="twitter:image" content="https://matterstack.ai/images/logo-soocial.png">
+		
+		<!-- Structured Data for SEO -->
+		<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Matterstack, Inc.",
+			"url": "https://matterstack.ai",
+			"logo": "https://matterstack.ai/images/M-Icon-Blue.png",
+			"description": "AI for Microelectronics Materials",
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"email": "contact@matterstack.ai",
+				"contactType": "Customer Service"
+			}
+			}
+		</script>
 
 		<!-- <title>Matterstack, Inc.</title>
 		<meta name="description" content="Matterstack, Inc. - AI for microelectronics materials" /> -->
 		<meta charset="utf-8" />
+		<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline';"> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<!--  Favicon and Apple Touch Icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+		<meta name="apple-mobile-web-app-title" content="Matterstack" />
+		<link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+		<link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="manifest" href="site.webmanifest">
+
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
@@ -74,14 +111,10 @@
 								onmouseout="this.style.filter=''; this.style.transform=''; clearInterval(this.shakeInterval);"
 								draggable="false">
 							</a>
-							<!-- <a href="index.html">
-								<img src="images/M-Icon-White.png" alt="Custom Logo" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; transition: transform 0.6s ease;" onmouseover="this.style.transform='rotate(360deg)'" onmouseout="this.style.transform='rotate(0deg)'">
-							</a></a> -->
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1 style="text-transform: none; letter-spacing: 0em;">matterstack</h1>
-								<!-- <h1 style="text-transform: none; letter-spacing: 0em;">matterstack<sup style="vertical-align: super; font-size: 0.3em; position: relative; top: -0.5em; font-weight: 300; opacity: 0.8;">TM</sup></h1> -->
 								<p style="letter-spacing: +0.2em;">AI for microelectronics materials</p>
 							</div>
 						</div>
@@ -101,61 +134,6 @@
 
 				<!-- Main -->
 					<div id="main">
-
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
-
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
 						<!-- Elements -->
 							<article id="elements">
 								<h2 class="major">Elements</h2>
