@@ -967,7 +967,7 @@ button {
   transition: color 0.2s ease;
 }
 .team-member .social-icon:hover {
-  color: #00ffcc;
+  color: #72B3C7;
   border-bottom: none;
 }
 .team-member .linkedin-text {
@@ -981,7 +981,7 @@ button {
   margin: 0 auto 1rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #00ffcc;
+  border: 3px solid #72B3C7;
   box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
 }
 
