@@ -929,6 +929,75 @@ button {
   line-height: calc(2.75rem - 2px);
 }
 
+#team {
+  max-width: 70vw !important;
+  width: 70vw !important;
+  margin: 0 auto;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+  margin-bottom: 2rem;
+}
+.team-member h3 {
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+}
+.team-member p {
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+}
+.team-member .social-icon {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.5rem;
+  border-bottom: none;
+  transition: color 0.2s ease;
+}
+.team-member .social-icon:hover {
+  color: #00ffcc;
+  border-bottom: none;
+}
+.team-member .linkedin-text {
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.team-photo {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #00ffcc;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+}
+
+@media screen and (max-width: 736px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .team-member {
+    margin-bottom: 3rem;
+  }
+  .team-member h3, .team-member p {
+    white-space: normal;
+  }
+}
 /* BG */
 #bg {
   transform: scale(1.0);
